@@ -1,0 +1,174 @@
+.createColorsDiv > p {
+  font-size: larger;
+  font-weight: bold;
+}
+.colorDiff {
+  position: relative;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.colorDiff input {
+  border-radius: 5px;
+  padding-left: 5px;
+  margin-left: auto;
+  width: 100px;
+  height: 25px;
+}
+
+.createColorsDiv {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 10px 15px 5px;
+  gap: 20px;
+  overflow: hidden;
+  border-radius: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+
+  .label {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .label input {
+    width: 50%;
+    max-width: 150px;
+    height: 25px;
+    border-radius: 5px;
+  }
+
+  .productImageDiv {
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 20px 10px;
+    justify-content: space-between;
+
+    .productImage {
+      max-height: 95%;
+      max-width: 95%;
+      width: fit-content;
+      height: fit-content;
+      border-radius: 10px;
+      margin: auto;
+    }
+
+    .imgDiv {
+      padding-bottom: 3px;
+      height: 100px;
+      width: 100px;
+      position: relative;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      border-radius: 10px;
+      display: flex;
+    }
+
+    .imgDiv > svg {
+      cursor: pointer;
+      right: 0px;
+      position: absolute;
+      height: 20px;
+      top: 0px;
+      width: 20px;
+    }
+  }
+
+  .selectImages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 10px;
+  }
+
+  .selectImages input {
+    display: none;
+  }
+  .selectImages p {
+    margin-right: auto;
+  }
+  .selectImages label {
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: small;
+    box-shadow: inset 1px 1px 3px 0px white;
+    text-align: center;
+  }
+
+  .selectImages button {
+    margin-left: 20px;
+    padding: 3px 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: deepskyblue;
+    background-color: black;
+    box-shadow: inset 1px 1px 4px 0px;
+  }
+}
+.createdColors {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  margin-bottom: 20px;
+  gap: 20px 10px;
+  justify-content: space-between;
+  .color {
+    display: flex;
+    flex-wrap: wrap;
+    width: fit-content;
+    width: 120px;
+    height: 150px;
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-radius: 10px;
+    row-gap: 5px;
+  }
+  .color > p {
+    width: 70%;
+    overflow-x: hidden;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+  }
+  .color img {
+    margin: auto auto 5px auto;
+    border-radius: 5px;
+    max-height: 78%;
+    max-width: 90%;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .color svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .createColorsDiv > p {
+    font-size: medium;
+  }
+  .colorDiff {
+    font-size: 15px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .colorDiff input {
+    margin-left: 5px;
+  }
+
+  .selectImages p {
+    text-align: center;
+    width: 100%;
+  }
+  .selectImages label {
+    margin-right: auto;
+  }
+}

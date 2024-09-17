@@ -1,0 +1,81 @@
+.mainDiv {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 15px 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  row-gap: 10px;
+  border-radius: 10px;
+}
+.mainDiv > p {
+  width: 100%;
+  font-weight: bold;
+}
+.mainDiv > button {
+  min-width: 90px;
+  padding-left: 5px;
+  padding-right: 20px;
+  border: none;
+  height: 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 10px 5px;
+  text-align: start;
+  position: relative;
+}
+.mainDiv button span {
+  background-color: gainsboro;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  width: 1em;
+  border-radius: 50%;
+  top: 0px;
+}
+.options {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+  justify-content: space-between;
+}
+
+.option {
+  width: 140px;
+  height: 170px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding: 2px;
+}
+
+.option svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.rightArrow {
+  margin-left: auto;
+}
+.option > p {
+  min-width: 50%;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: fit-content;
+}
+.createdColor svg:not(:nth-child(1)) {
+  margin-left: auto;
+}
+.img {
+  margin: 5px auto 2px auto;
+  max-height: 100px;
+  width: fit-content;
+  border-radius: 5px;
+  max-width: 95%;
+  height: fit-content;
+  margin-top: auto;
+}

@@ -1,0 +1,98 @@
+.form {
+  margin-top: 60px;
+  width: 48%;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: center;
+  row-gap: 20px;
+}
+.form h2 {
+  font-size: large;
+  font-weight: 500;
+  margin-right: auto;
+  grid-column: 1/-1;
+}
+.form textarea {
+  height: 45px;
+  padding: 2px;
+}
+.form > label {
+  grid-column: 1/2;
+}
+.form input {
+  padding-left: 5px;
+  height: 25px;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.form :nth-child(7) {
+  background-color: #88b8cd;
+}
+.form :nth-child(8) {
+  min-width: 100px;
+}
+.form :nth-child(9) {
+  grid-column: 2/-1;
+  max-width: 90%;
+  border-radius: 5px;
+  max-height: 100px;
+}
+
+.select {
+  text-align: center;
+  width: 200px;
+  height: 25px;
+  border-radius: 5px;
+}
+.privacy {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  grid-column: 1/-1;
+}
+.privacy input {
+  height: 15px;
+  width: 30px;
+}
+
+.privacy > a {
+  color: skyblue;
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.form button {
+  grid-column: 1/-1;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  height: 35px;
+  transition: all ease-in-out 300ms;
+  cursor: pointer;
+  box-shadow: inset 0px 0px 30px 0px skyblue;
+  font-weight: bold;
+  font-size: medium;
+}
+.form button:hover {
+  box-shadow: 1px 1px 2px 1px #88b8cd;
+}
+
+@media screen and (max-width: 480px) {
+  .form {
+    padding: 5px;
+  }
+  .form input:not(.privacy input) {
+    grid-column: 2/-1;
+    margin-left: auto;
+  }
+  .form :nth-child(7) {
+    grid-column: 2/-1;
+    margin-left: auto;
+  }
+  .form textarea {
+    min-width: 100%;
+  }
+}

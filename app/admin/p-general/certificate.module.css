@@ -1,0 +1,149 @@
+.certificate {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-radius: 10px;
+  padding: 20px 5px;
+  margin-top: 30px;
+}
+.certificate h4 {
+  font-size: large;
+}
+.names {
+  margin-top: 20px;
+}
+
+.newCertificate {
+  width: 100%;
+  font-weight: 600;
+  color: lightskyblue;
+  display: flex;
+  align-items: center;
+}
+.newCertificate input {
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  margin-left: auto;
+  border-radius: 5px;
+  width: 60%;
+  color: white;
+  box-shadow: inset 1px 1px 2px 0px white;
+}
+.newCertificate button {
+  margin-left: 15px;
+  background-color: transparent;
+  color: #18b918;
+  box-shadow: inset 0px 0px 3px 0px white;
+  padding: 3px 10px;
+  border-radius: 5px;
+}
+.singleCer {
+  margin: 15px auto;
+  border: 1px solid white;
+  width: 95%;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  height: 35px;
+}
+.singleCer p {
+  display: flex;
+  cursor: pointer;
+  padding-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  flex-grow: 1;
+}
+.singleCer p span {
+  margin: auto auto auto 0px;
+  width: 20px;
+  background-color: dimgrey;
+  text-align: center;
+  border-radius: 50%;
+}
+.singleCer svg {
+  width: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.top {
+  transform: rotate(-90deg);
+}
+.bottom {
+  transform: rotate(90deg);
+}
+.opened {
+  margin-top: 60px;
+  border-top: 1px solid;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 20px;
+}
+.opened > p {
+  width: 100%;
+  display: flex;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.opened > p span {
+  font-weight: bold;
+  color: lightskyblue;
+  margin-left: auto;
+}
+
+.addLink {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.addLink input {
+  padding-left: 5px;
+  margin-right: 15px;
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  height: 25px;
+  border-radius: 5px;
+  color: white;
+  box-shadow: inset 1px 1px 2px 0px white;
+}
+.addLink button {
+  font-weight: bold;
+  color: #18b918;
+  background-color: transparent;
+}
+
+.imgDiv {
+  display: flex;
+  flex-wrap: wrap;
+  height: 200px;
+  width: fit-content;
+  width: 170px;
+  border-radius: 10px;
+  border: 1px solid;
+  padding: 2px;
+}
+
+.imgDiv img {
+  margin: auto auto 2px auto;
+  max-height: 170px;
+  width: fit-content;
+  border-radius: 5px;
+  max-width: 95%;
+  height: fit-content;
+}
+
+.imgDiv > svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.imgDiv svg:not(:nth-child(1)) {
+  margin-left: auto;
+}

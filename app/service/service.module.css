@@ -1,0 +1,21 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  background: url("https://res.cloudinary.com/duxuhsx8x/image/upload/v1700626740/SiteImages/service_hhhlp6.jpg");
+}
+.section a {
+  background: linear-gradient(to right, white, transparent);
+  width: fit-content;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+.section h1 {
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .section {
+    background: url("https://res.cloudinary.com/duxuhsx8x/image/upload/v1700629545/SiteImages/sevice-mobile_qcng02.jpg");
+    background-size: 400px 800px;
+  }
+}

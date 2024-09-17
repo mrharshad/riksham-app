@@ -1,0 +1,314 @@
+.section {
+  background-color: black;
+  padding-bottom: 20px;
+  color: white;
+  column-gap: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  height: fit-content;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  min-width: 480px;
+  width: 30vw;
+  flex-direction: column;
+  box-shadow: inset 0px 0px 4px 0px rgb(249, 249, 249);
+  ---one: max(1px 0.4vh);
+}
+
+.nameInput {
+  background-color: lightgray;
+  height: 25px;
+  border-radius: 10px;
+}
+.firstDes {
+  margin-top: 30px;
+}
+
+.mainDes {
+  margin-top: 10px;
+}
+
+.second {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0px 10px 0px;
+  row-gap: 5px;
+}
+.thumbnail {
+  border-radius: 10px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  flex-direction: column;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  row-gap: 10px;
+}
+
+.thumbnail input {
+  display: none;
+}
+
+.thumbnail img {
+  max-width: 85%;
+  width: fit-content;
+  max-height: 250px;
+  height: fit-content;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.thumbnail label {
+  border-radius: 4px;
+  padding: 3px 10px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 3px 0px white;
+}
+.second > button {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  background-color: black;
+  border-radius: 10px;
+  border: none;
+  transition: box-shadow 300ms ease;
+}
+
+.second input::placeholder {
+  font-size: small;
+}
+.form {
+  border-top: 1px solid;
+  padding: 10px 5px;
+  border-radius: 10px;
+  flex-wrap: wrap;
+}
+.form h4 {
+  font-size: large;
+  display: flex;
+  width: 100%;
+}
+.form h4 > span {
+  margin-left: auto;
+  width: 20px;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  font-size: small;
+  text-align: center;
+  border-radius: 50%;
+  height: 20px;
+}
+.form > input {
+  height: 30px;
+  border-radius: 5px 0px 0px 5px;
+  box-shadow: inset 1px 0px 3px 0px white;
+  background-color: black;
+  min-width: 200px;
+  width: 60%;
+  margin-top: 20px;
+  margin-left: auto;
+  color: white;
+  outline: none;
+  border: none;
+}
+.form > button {
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 0px 5px 5px 0px;
+  background-color: skyblue;
+  padding-left: 5px;
+  padding-right: 5px;
+  font-weight: bold;
+  font-size: x-small;
+}
+.form {
+  display: flex;
+  align-items: center;
+}
+.container input {
+  padding-left: 5px;
+}
+
+.container .keyValues div {
+  display: flex;
+  align-items: center;
+  padding-top: 5px;
+  column-gap: 10px;
+  padding-bottom: 5px;
+}
+
+.keyValues input {
+  height: 25px;
+  padding: 2px 5px;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+  outline: 1px solid gray;
+}
+
+.description svg,
+.keyValues svg {
+  margin-top: 10px;
+  height: 25px;
+  width: 50px;
+  cursor: pointer;
+}
+.description svg {
+  padding-left: 10px;
+}
+.keyValues div textarea {
+  max-height: 50px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 2px 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: 1px solid gray;
+  border-radius: 5px;
+}
+
+.descriptionLabel {
+  margin-top: 30px;
+}
+.description div {
+  display: flex;
+  margin-top: 15px;
+}
+.description div textarea {
+  max-height: 100px;
+  margin-top: 10px;
+  width: 100%;
+  padding: 2px 5px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: 1px solid gray;
+  border-radius: 5px;
+}
+
+.container textarea:focus {
+  outline: 1px solid white;
+}
+
+.container .submitBtn {
+  margin-top: 25px;
+  font-weight: 500;
+  font-size: medium;
+  color: white;
+  box-shadow: inset 1px 1px 30px 0px white;
+}
+
+.container .submitBtn:hover {
+  box-shadow: inset 100px 0px 0px 0px black;
+}
+
+.searchProduct {
+  border-bottom: 1px solid;
+  border-radius: 10px;
+  margin-top: 20px;
+  padding: 10px 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-height: 300px;
+}
+.searchProduct::-webkit-scrollbar {
+  display: none;
+}
+
+.searchProduct > div {
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  padding-left: 5px;
+  column-gap: 20px;
+  background: linear-gradient(to right, #232323, transparent);
+}
+.searchProduct > div > svg {
+  height: 18px;
+  width: 18px;
+  cursor: pointer;
+}
+
+.searchProduct > span {
+  text-align: center;
+  font-size: larger;
+  margin-top: 30px;
+}
+.searchProduct > button {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  border-bottom: 1px solid;
+  margin: 10px 10px 10px auto;
+  font-size: x-small;
+}
+.searchProduct p {
+  height: 20px;
+  width: 20px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  position: relative;
+  margin-left: auto;
+  .one {
+    rotate: 55deg;
+  }
+
+  .two {
+    rotate: -55deg;
+  }
+}
+
+.searchProduct p span {
+  position: absolute;
+  background-color: red;
+  width: 80%;
+  height: 3px;
+  border-radius: 5px;
+  animation: closeBtn alternate infinite 4s;
+}
+@media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 99%;
+    min-width: 280px;
+    box-shadow: none;
+  }
+
+  .difference {
+    font-size: small;
+  }
+
+  .keyValues div {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .keyValues div textarea {
+    order: 2;
+  }
+  .keyValues div svg {
+    width: 25px;
+    margin-top: 0px;
+  }
+  .description svg {
+    width: 35px;
+  }
+}

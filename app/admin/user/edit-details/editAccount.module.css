@@ -1,0 +1,180 @@
+.section {
+  --one: max(1px, 0.1vh);
+  --hundred: max(100px, 10vh);
+  --fifteen: max(15px, 1.5vh);
+  --twenty: max(20px, 2.1vh);
+  background: linear-gradient(to right bottom, black, #566a7a);
+  /* padding-top: var(--twenty); */
+
+}
+
+.form {
+  padding: 10px 5px;
+  color: white;
+  display: flex;
+  max-width: max(500px, 52vh);
+  width: 95%;
+  border-radius: 1rem;
+  background: linear-gradient(to top left, black, #202020, #434d53);
+  box-shadow: inset var(--one) var(--one) 5px -1px white;
+  flex-direction: column;
+  height: 100%;
+  margin-left: auto;
+  row-gap: .4rem;
+  margin-right: auto;
+}
+
+.form h1 {
+  font-size: var(--twenty);
+  margin-top: 1em;
+  margin-bottom: .7em;
+}
+
+.form label {
+  margin-top: 1em;
+  font-size: var(--fifteen);
+}
+
+.form input {
+  padding-left: 0.5em;
+  border-radius: 1em;
+  height: max(25px, 2.6vh);
+  font-size: var(--fifteen);
+  transition: background-color 400ms ease-in-out;
+}
+
+.form input:focus {
+  background-color: #cee9f8;
+}
+
+.form input::placeholder {
+  font-size: 0.8em;
+  padding-left: 0.5em;
+}
+
+.form div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.form .stateContainer>label {
+  width: 45%;
+  margin-bottom: 0.3rem;
+}
+
+.form .stateContainer>input {
+  width: 45%;
+}
+
+.stateContainer>select {
+  width: 45%;
+  padding-left: 0.5em;
+  border-radius: .5em;
+  height: max(25px, 2.6vh);
+  font-size: var(--fifteen);
+  transition: background-color 400ms ease-in-out;
+}
+
+.personalInfo {
+  position: relative;
+  margin-top: 10px;
+}
+
+.personalInfo p {
+  font-size: var(--fifteen);
+  display: flex;
+  margin-top: 1rem;
+  margin-right: 30%;
+}
+
+.personalInfo label {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+
+.personalInfo label input {
+  margin-left: 10px;
+}
+
+.personalInfo>input {
+  margin-left: auto;
+}
+
+.personalInfo>input[type="date"] {
+  border-radius: 5px;
+  width: 135px;
+  margin-top: 1rem;
+}
+
+.personalInfo>input[type="date"]:focus {
+  background-color: white;
+}
+
+.personalInfo>span {
+  position: absolute;
+  background-color: white;
+  right: 30px;
+  bottom: 3px;
+  height: 48%;
+  display: inline-block;
+  width: 100px;
+  color: black;
+  text-align: center;
+}
+
+.form>button {
+  margin: 15px auto var(--twenty) auto;
+  width: 30%;
+  height: max(40px, 4vh);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fifteen);
+  border: none;
+  border-radius: 0.5em;
+}
+
+.container>form>button:hover {
+  scale: 1.1;
+}
+
+.firstStep {
+  flex-direction: column;
+}
+
+.form button {
+  background: linear-gradient(to right top, #d2e5ff, #64cfdd);
+}
+
+.form .links {
+  display: flex;
+  color: skyblue;
+}
+
+.form a {
+  color: #74d3ff;
+}
+
+.form>p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 98%;
+  }
+}
+
+@keyframes moveArrow {
+  to {
+    translate: 0%;
+  }
+
+  from {
+    translate: 95%;
+
+  }
+}

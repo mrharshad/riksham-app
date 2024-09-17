@@ -1,0 +1,115 @@
+.section {
+  background: linear-gradient(to right bottom, black, #566a7a);
+  min-height: 100svh;
+  --one: max(1px, 0.1vh);
+  --hundred: max(100px, 10vh);
+  --fifteen: max(15px, 1.5vh);
+  --twenty: max(20px, 2.1vh);
+  padding-top: var(--twenty);
+}
+
+.secondStep {
+  padding: 10px;
+  color: white;
+  display: flex;
+  row-gap: 0.4em;
+  flex-direction: column;
+  max-width: max(450px, 50vh);
+  width: 95%;
+  margin: 0px auto 0px auto;
+  border-radius: 1rem;
+  background: linear-gradient(to top left, black, #202020, #434d53);
+  box-shadow: inset var(--one) var(--one) 5px -1px white;
+  flex-direction: column;
+}
+
+.secondStep label {
+  margin-top: 1em;
+  font-size: var(--fifteen);
+}
+
+.secondStep input {
+  border-radius: 0.5em;
+  font-size: var(--fifteen);
+  transition: background-color 400ms ease-in-out;
+}
+
+.secondStep > input {
+  padding-left: 0.5em;
+  height: max(30px, 3.4vh);
+  border: 2px solid;
+}
+
+.secondStep input:focus {
+  background-color: #cee9f8;
+  outline: none;
+}
+
+.secondStep input::placeholder {
+  padding-left: 0.5em;
+}
+
+.secondStep button {
+  margin: 15px auto var(--twenty) auto;
+  width: 30%;
+  height: max(37px, 4vh);
+  cursor: pointer;
+  font-weight: 600;
+  font-size: var(--fifteen);
+  border: none;
+  border-radius: 0.5em;
+}
+
+.secondStep {
+  .identity {
+    font-size: large;
+  }
+
+  .identity span {
+    font-size: medium;
+    font-weight: 600;
+    color: #859aa8;
+  }
+}
+
+.secondStep > p:nth-child(1) {
+  font-size: large;
+  font-weight: 600;
+  color: #cee9f8;
+  text-align: end;
+}
+
+.secondStep .verifyInput {
+  text-align: center;
+  margin-left: auto;
+  width: 90px;
+  height: max(25px, 2.6vh);
+}
+
+.secondStep .resend {
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.secondStep .resend span {
+  color: #74d3ff;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+  .secondStep {
+    width: 98%;
+
+    .identity {
+      font-size: medium;
+    }
+
+    .resend {
+      font-size: small;
+    }
+  }
+
+  .secondStep > p:nth-child(1) {
+    font-size: medium;
+  }
+}

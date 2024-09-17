@@ -1,0 +1,587 @@
+.mainContainer {
+  background-color: black;
+  min-height: 100svh;
+  color: white;
+}
+
+.searchBar {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.searchBar input {
+  font-size: max(1.5vh, 13px);
+  padding-left: 10px;
+  width: 80%;
+  max-width: 250px;
+  height: 30px;
+  outline: none;
+  color: white;
+  background-color: transparent;
+  border-radius: 5px 0px 0px 5px;
+  margin-left: auto;
+  border: none;
+  box-shadow: inset 0px 0px max(0.4vh, 5px) 0px white;
+}
+
+.searchBar input:focus {
+  border: max(0.1vh, 1px) solid skyblue;
+}
+
+.searchBar input::placeholder {
+  color: white;
+}
+
+.searchBar button {
+  height: 30px;
+  border: none;
+  width: max(4vh, 40px);
+  background-color: skyblue;
+  border-radius: 0px 5px 5px 0px;
+  margin-right: 1%;
+}
+
+.searchBar button svg {
+  width: 30px;
+}
+
+.showDetails {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.section {
+  background-color: black;
+  min-height: 100%;
+  padding-top: 10px;
+}
+
+.products {
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin: 70px auto 0px auto;
+  border-radius: 10px;
+  display: grid;
+  gap: 15px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 270px);
+  grid-template-rows: repeat(auto-fit, 100px);
+}
+
+.products p {
+  font-size: large;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  background-color: rgb(24, 24, 24);
+  border-radius: 10px;
+}
+
+.products > .notFound {
+  text-align: center;
+  background: transparent;
+  font-size: larger;
+  margin-top: 10svh;
+}
+
+.products p span {
+  color: red;
+  margin-right: 5px;
+}
+
+.dialog {
+  background-color: #000000c7;
+  width: 100svw;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90svh;
+  top: 50px;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    width: 95%;
+    max-width: 300px;
+    box-shadow: 1px 1px 3px 0px white;
+    padding: 10px 5px;
+    margin: 20svh auto;
+  }
+
+  .heading {
+    display: flex;
+    height: 30px;
+    justify-content: space-between;
+  }
+
+  .heading svg {
+    height: 30px;
+  }
+
+  .paymentTypes p {
+    padding: 2px 5px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .receiverAmo {
+    margin-top: 15px;
+    font-size: large;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .receiverAmo span {
+    font-weight: 600;
+    color: #25bd7b;
+    margin-left: auto;
+  }
+}
+
+.dialog button {
+  width: 100px;
+  margin: 10px auto 0px auto;
+  height: 25px;
+  border-radius: 5px;
+  background: linear-gradient(to top right, white, #25bd7b);
+  border: none;
+}
+
+.newOrder {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 5px 10px 20px 10px;
+  width: 99%;
+  max-width: 1000px;
+  margin: 20px auto 0px auto;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  justify-content: space-around;
+
+  .heading {
+    display: flex;
+    width: 100%;
+    font-size: x-large;
+  }
+  .heading svg {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+  }
+  .name {
+    font-size: large;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .imgCover {
+    width: 40%;
+    margin-right: auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  .imgCover img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin: auto;
+    max-height: 250px;
+    height: fit-content;
+    width: fit-content;
+  }
+}
+
+.variantInfo {
+  width: 58%;
+  margin-left: auto;
+
+  .charges {
+    font-size: large;
+  }
+
+  .charges span:last-child {
+    margin-left: 5%;
+  }
+  .shippingCost {
+    margin-top: 10px;
+  }
+  .price {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .current {
+      font-size: xx-large;
+      font-weight: 600;
+      display: flex;
+    }
+
+    .mrp {
+      margin-left: 5%;
+      margin-right: 2%;
+    }
+
+    .mrp span {
+      text-decoration: line-through;
+    }
+  }
+
+  .colors,
+  .variants {
+    margin-bottom: 20px;
+    display: flex;
+    padding: 2px 5px;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: auto;
+    scrollbar-width: none;
+    column-gap: 10px;
+
+    .div {
+      min-width: fit-content;
+      width: 100px;
+      background: linear-gradient(to left top, transparent, #5b5959);
+      border-radius: 5px;
+      padding-left: 5px;
+      justify-content: center;
+      display: flex;
+      column-gap: 10px;
+      padding-right: 5px;
+      cursor: pointer;
+    }
+  }
+}
+
+.colors::-webkit-scrollbar {
+  display: none;
+}
+
+.variants::-webkit-scrollbar {
+  display: none;
+}
+
+.findUser {
+  margin-left: auto;
+}
+
+.findUser button {
+  background: linear-gradient(to right top, yellow, white);
+  border-radius: 5px;
+  padding: 2px 5px;
+  cursor: pointer;
+  width: 60px;
+}
+
+.findUser input {
+  border-radius: 5px;
+}
+
+.afterUserSelected {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+
+  flex-direction: column;
+
+  .orderSummary,
+  .userInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 15px;
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid rgb(70, 70, 70);
+  }
+
+  .userInfo h2 {
+    width: 100%;
+  }
+
+  .userInfo > p {
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 25px;
+    background-color: #303335;
+  }
+
+  .userInfo p span {
+    font-size: medium;
+  }
+
+  .orderSummary > p {
+    border-radius: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 25px;
+    background-color: #303335;
+  }
+
+  .orderSummary h3 {
+    width: 100%;
+  }
+
+  .orderQuantity {
+    width: 100%;
+  }
+
+  .orderQuantity input {
+    border-radius: 5px;
+    width: 50px;
+    padding-left: 5px;
+  }
+
+  .h5 {
+    font-size: large;
+  }
+
+  .paymentBtn {
+    width: 100px;
+    margin: 10px auto 0px auto;
+    height: 30px;
+    border-radius: 5px;
+    background: linear-gradient(to top right, white, #25bd7b);
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header > label {
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    width: 60px;
+    align-items: center;
+    background-color: black;
+    height: 35px;
+    cursor: pointer;
+    transition: all 1s ease-in;
+  }
+
+  .header > label > span {
+    transition: all 0.5s ease-in;
+    position: relative;
+    width: 20px;
+    border: 1px solid aqua;
+  }
+
+  .header > label > .topLing {
+    top: 30%;
+    transform: rotate(40deg);
+  }
+
+  .header > label > .bottomLine {
+    top: 70%;
+    transform: rotate(-40deg);
+  }
+
+  .header > input:checked ~ label {
+    transform: translateX(90vw);
+    /* margin-left: auto; */
+    margin-right: 50px;
+  }
+
+  .header > input:checked ~ label .topLing {
+    border: 1px solid coral;
+    transform: rotate(-40deg);
+  }
+
+  .header > input:checked ~ label .bottomLine {
+    transform: rotate(40deg);
+    border: 1px solid coral;
+  }
+
+  .header nav {
+    padding: 3px 50px 3px 0px;
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    transition: transform 1s ease-in;
+    transform: translateX(-500px);
+  }
+
+  .header > input:checked ~ nav {
+    transform: translateX(0);
+  }
+
+  .header form {
+    width: 100%;
+  }
+
+  .header form input {
+    width: 90%;
+  }
+}
+
+.wait {
+  border-top: 3px solid deepskyblue;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1.5s linear infinite;
+  margin: auto;
+}
+
+@media only screen and (max-width: 480px) {
+  .searchBar input {
+    width: 50%;
+  }
+
+  .products {
+    grid-template-rows: none;
+    padding-top: 0px;
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, 90%);
+    gap: 25px 0px;
+
+    .notFound {
+      margin-top: 20svh;
+      font-size: large;
+    }
+    .name {
+      font-size: medium;
+    }
+  }
+
+  .newOrder {
+    position: relative;
+    column-gap: 0px;
+
+    .heading {
+      font-size: medium;
+    }
+
+    .name {
+      font-size: small;
+    }
+
+    .imgCover {
+      max-width: 30%;
+      position: absolute;
+      top: 70px;
+      left: 5px;
+      height: 155px;
+    }
+
+    .imgCover img {
+      max-height: 145px;
+    }
+  }
+
+  .newOrder .variantInfo {
+    width: 100%;
+    row-gap: 10px;
+    display: flex;
+    flex-direction: column;
+
+    .charges {
+      font-size: small;
+      width: 60%;
+      margin-left: auto;
+    }
+
+    .shippingCost {
+      font-size: small;
+      width: 60%;
+      margin-left: auto;
+      height: 50px;
+    }
+
+    .price {
+      width: 60%;
+      margin-left: auto;
+
+      .current {
+        font-size: large;
+      }
+
+      .mrp {
+        font-size: 11px;
+      }
+    }
+
+    .colors,
+    .variants {
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .variants {
+      margin-top: 0px;
+    }
+  }
+
+  .findUser {
+    align-items: center;
+    display: flex;
+    column-gap: 5px;
+    font-size: small;
+  }
+
+  .findUser input {
+    width: 45%;
+  }
+
+  .findUser button {
+    width: 50px;
+    margin-left: auto;
+  }
+
+  .afterUserSelected {
+    .userInfo h2 {
+      font-size: larger;
+    }
+
+    .orderSummary,
+    .userInfo {
+      flex-direction: column;
+    }
+
+    .userInfo > p {
+      width: 100%;
+      height: fit-content;
+    }
+
+    .orderSummary > p {
+      height: fit-content;
+    }
+
+    .h5 {
+      font-size: medium;
+    }
+
+    .h5 span {
+      font-size: small;
+    }
+  }
+
+  .container {
+    .paymentTypes p {
+      font-size: small;
+      padding: 7px 5px;
+    }
+
+    .receiverAmo {
+      font-size: medium;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

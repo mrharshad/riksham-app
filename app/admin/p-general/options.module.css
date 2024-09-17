@@ -1,0 +1,55 @@
+.mainDiv {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+}
+.toggleInput {
+  display: none;
+}
+.mainDiv > span {
+  margin-right: 10%;
+  margin-left: auto;
+}
+.mainDiv > input {
+  width: max(100px, 50%);
+  height: 20px;
+  color: white;
+  border-radius: 5px;
+  background-color: black;
+  outline: 1px solid gray;
+  border: none;
+  margin-left: auto;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 5px;
+  width: 100%;
+  margin-top: 20px;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  max-height: 50px;
+}
+.options::-webkit-scrollbar {
+  display: none;
+}
+.options button {
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  padding: 2px 5px;
+  min-width: 50px;
+  background-color: #1f252b;
+  color: white;
+}
+
+.cancelOpt {
+  height: 20px;
+  width: 30px;
+  background-color: black;
+  color: red;
+}

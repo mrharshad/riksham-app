@@ -1,0 +1,168 @@
+.firstInput {
+  display: none;
+}
+
+.first {
+  overflow-y: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 5px;
+  border-radius: 10px;
+  height: fit-content;
+  justify-content: space-between;
+  transition: all 500ms ease;
+  max-height: 1000px;
+  border-bottom: 1px solid;
+  margin-bottom: 10px;
+  background-color: #1c1c1c;
+}
+
+.first > div {
+  border-top: 1px solid white;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.first > label {
+  font-size: larger;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.docBtn {
+  display: flex;
+  column-gap: 20px;
+  overflow-x: auto;
+}
+.docBtn > button {
+  height: 1.7em;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 130px;
+  background-color: white;
+  width: fit-content;
+}
+.first > div > P {
+  font-weight: bold;
+}
+.first div:not(:nth-child(2)) button {
+  background-color: lightslategray;
+  height: 1.6em;
+  border: none;
+  border-radius: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.draft div,
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+  align-items: center;
+}
+.draft > p {
+  position: sticky;
+  top: 0px;
+  background-color: #1c1c1c;
+  padding-top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.draft > p span {
+  width: 20px;
+  font-size: small;
+  display: inline-block;
+  background-color: white;
+  color: black;
+  height: 20px;
+  text-align: center;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+.draft > div {
+  background: linear-gradient(to right, #232323, transparent);
+  margin-top: 25px;
+  border-radius: 10px;
+  padding: 2px 5px;
+}
+.components {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  row-gap: 10px;
+  padding-top: 10px;
+}
+.components p {
+  width: fit-content;
+  margin-right: auto;
+}
+.draft {
+  margin-top: 5px;
+  padding-top: 0px;
+  border-top: 1px solid white;
+  max-height: 10rem;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.draft::-webkit-scrollbar {
+  display: none;
+}
+.draft div p {
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.draft div span {
+  background-color: #1c1c1c;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.draft div span:not(:nth-child(2)) {
+  margin-right: auto;
+}
+
+.draft div p {
+  width: 100%;
+}
+.preview {
+  display: flex;
+  column-gap: 10px;
+  font-weight: bold;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.preview > P {
+  margin-right: auto;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 480px) {
+  .firstInput:checked ~ .first {
+    max-height: 5svh;
+  }
+}
+@media screen and (max-width: 480px) {
+  .firstInput:checked ~ .first {
+    max-height: max(5.7svh, 49px);
+  }
+  .docBtn {
+    scrollbar-width: none;
+  }
+  .docBtn::-webkit-scrollbar {
+    display: none;
+  }
+}

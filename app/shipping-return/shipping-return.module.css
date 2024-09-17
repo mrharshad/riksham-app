@@ -1,0 +1,36 @@
+.section {
+  color: white;
+  background-color: black;
+  white-space-collapse: preserve-breaks;
+  padding-left: 10px;
+}
+
+.h1 {
+  display: flex;
+}
+.h1 a {
+  color: skyblue;
+  font-size: large;
+  font-weight: 500;
+  margin: auto 5% auto auto;
+}
+
+.section p {
+  font-weight: bold;
+  margin-top: 20px;
+}
+.section input {
+  display: none;
+}
+.section input:checked ~ span {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 480px) {
+  .h1 {
+    font-size: larger;
+  }
+  .h1 a {
+    font-size: medium;
+  }
+}

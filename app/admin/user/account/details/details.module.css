@@ -1,0 +1,91 @@
+.mainDiv {
+  background-color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  width: 100%;
+  z-index: 1;
+  height: 100%;
+  position: absolute;
+  right: 0px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  border-radius: 5px;
+}
+.form label {
+  padding: 2px 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #141414;
+  align-items: center;
+  column-gap: 10px;
+}
+.form input {
+  border-radius: 5px;
+  padding-left: 5px;
+  height: 25px;
+  display: inline-block;
+  background-color: #a0aaad;
+  max-width: 35%;
+}
+
+.personalInfo {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  column-gap: 20px;
+  background-color: #141414;
+  position: relative;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.personalInfo p {
+  margin-right: auto;
+}
+
+.personalInfo label {
+  margin-top: 0px;
+}
+.personalInfo > input[type="date"]:focus {
+  background-color: white;
+}
+.personalInfo > input[type="date"] {
+  border-radius: 5px;
+  width: 135px;
+  height: max(25px, 2.6svh);
+  background-color: white;
+}
+.personalInfo > span {
+  position: absolute;
+  background-color: white;
+  right: 23px;
+  bottom: 4px;
+  height: 75%;
+  display: inline-block;
+  width: 112px;
+  color: black;
+  padding-bottom: 5px;
+  text-align: center;
+}
+.form button {
+  padding: 5px 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  box-shadow: inset 0px 0px 25px 1px #64e8fd;
+}
+
+@media screen and (max-width: 480px) {
+  .mainDiv {
+    width: 98%;
+    margin-right: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+    left: 1%;
+  }
+}

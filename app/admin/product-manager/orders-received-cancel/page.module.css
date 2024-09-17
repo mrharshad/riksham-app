@@ -1,0 +1,264 @@
+.section {
+  color: white;
+  background-color: black;
+  min-height: 100%;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: min-content, min-content;
+  align-items: center;
+}
+
+.h1 {
+  margin-left: 20px;
+  grid-column: 1/2;
+}
+
+.options {
+  grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  /* border: 1px solid; */
+  height: fit-content;
+  overflow-x: auto;
+  column-gap: 10px;
+  margin: 15px 10px 10px auto;
+  max-width: 100%;
+}
+.options span {
+  text-wrap: nowrap;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+.orders {
+  grid-column: 1/3;
+  width: 100%;
+  min-height: 90svh;
+  margin-bottom: auto;
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+.order {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  grid-template-rows: min-content 25px;
+  box-shadow: inset 0px 0px 3px 0px lightgrey;
+  border-radius: 3px;
+  padding: 5px;
+  height: fit-content;
+  max-width: 500px;
+  row-gap: 5px;
+}
+.order input[type="checkbox"] {
+  display: none;
+}
+.name {
+  font-size: medium;
+  grid-column: 1/-1;
+  font-weight: bold;
+  color: lightgrey;
+}
+.oDOption {
+  display: flex;
+  flex-wrap: nowrap;
+  text-wrap: nowrap;
+  overflow-x: auto;
+  grid-column: 1/-1;
+  column-gap: 10px;
+}
+
+.oDOption p:nth-child(1) {
+  margin-right: 20px;
+}
+
+.order img {
+  grid-column: 1/2;
+  max-width: 90%;
+  height: fit-content;
+  width: fit-content;
+  max-height: 130px;
+  border-radius: 5px;
+}
+.price {
+  grid-column: 2/3;
+  max-width: 60svw;
+}
+.price > span:nth-child(1) {
+  font-size: 18px;
+  color: lightgray;
+}
+.price span {
+  font-weight: bold;
+}
+.updated {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.updated span {
+  width: 100%;
+}
+.reasonDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.reasonDiv p span {
+  margin-right: 5px;
+}
+.reasonDiv button {
+  padding: 5px 10px;
+  font-size: small;
+  border-radius: 3px;
+  background-color: lightsteelblue;
+}
+.reasonDiv p:nth-child(2) {
+  color: lightsteelblue;
+}
+.uName {
+  grid-column: 1/-1;
+}
+.location {
+  grid-column: 1/-1;
+  display: flex;
+  gap: 5px;
+}
+.location p {
+  text-wrap: nowrap;
+}
+.updateBtn {
+  background-color: #000000cf;
+  height: 100vh;
+  top: 0px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+}
+.updateBtn h3 {
+  display: flex;
+  align-items: center;
+}
+.updateBtn h3 span {
+  font-size: medium;
+  margin-left: auto;
+}
+.updateBtn > div {
+  margin: 17svh auto 0px auto;
+  padding-left: 5px;
+}
+.updateBtn p span {
+  font-weight: bold;
+  margin-right: 10px;
+  color: lightgrey;
+}
+.updateBtn input {
+  width: 100%;
+  margin-top: 10px;
+  padding: 3px;
+  border-radius: 5px;
+  font-size: medium;
+  background-color: lightslategrey;
+}
+.statuses {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  row-gap: 10px;
+}
+.statuses span {
+  width: 100%;
+  border-radius: 3px;
+  padding: 2px 5px;
+  border: 1px solid lightgray;
+}
+.updateBtn button {
+  padding: 3px 20px;
+  border-radius: 2px;
+  margin-left: 5px;
+  margin-top: 20px;
+  background-color: transparent;
+  box-shadow: inset 1px 1px 2px 0px white;
+  color: red;
+}
+.submit {
+  margin-left: 20px !important;
+  color: #00ceff !important;
+}
+
+@media screen and (min-width: 480px) {
+  .orders {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .updateBtn {
+    display: flex;
+  }
+  .updateBtn p {
+    font-size: large;
+  }
+  .updateBtn > div {
+    min-width: 380px;
+  }
+  .location {
+    flex-wrap: wrap;
+  }
+  .location p {
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .h1 {
+    font-size: large;
+    margin-right: 20px;
+    margin-left: 0px;
+  }
+  .orders {
+    flex-direction: column;
+    align-content: center;
+    max-width: 100svw;
+  }
+  .order {
+    font-size: 14px;
+    max-width: 99%;
+    overflow: hidden;
+  }
+  .options {
+    scrollbar-width: none;
+    font-size: small;
+  }
+  .options ::-webkit-scrollbar {
+    display: none;
+  }
+  .oDOption {
+    scrollbar-width: none;
+  }
+  .oDOption ::-webkit-scrollbar {
+    display: none;
+  }
+  .location {
+    overflow-x: auto;
+    scrollbar-width: none;
+    column-gap: 10px;
+  }
+  .location p {
+    margin-left: 20px;
+  }
+  .location::-webkit-scrollbar {
+    display: none;
+  }
+  .reasonDiv p:nth-child(2) {
+    overflow-x: auto;
+    max-width: 100%;
+    text-wrap: nowrap;
+    scrollbar-width: none;
+  }
+  .reasonDiv p:nth-child(2)::-webkit-scrollbar {
+    display: none;
+  }
+}
