@@ -1,4 +1,4 @@
-export default [
+const categories = [
   "Accessories",
   "Athletic",
   "Badminton",
@@ -20,3 +20,5 @@ export default [
   "Sports",
   "Showpiece",
 ];
+
+export default categories;

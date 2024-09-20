@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "baseUrl": ".", // maine add kiya
+    "paths": { "@/*": ["./*"] }, // maine add kiya
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
