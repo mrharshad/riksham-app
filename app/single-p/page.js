@@ -8,22 +8,17 @@ const SingleProduct = async ({ params, searchParams }) => {
   const ButtonsComponent = dynamic(() => import("./ButtonsComponent"), {
     ssr: false,
   });
-  console.log("run single-p");
   const { k, _id } = searchParams;
   let result;
-  async function dataFetch(protocol_and_host) {
-    const request = await fetch(
-      `${protocol_and_host}/api/product/single-p/${_id}`,
-      { cache: "no-cache" }
-      // { next: { revalidate: 21600 } }
-    );
-    result = (await request.json()).data;
-  }
-  try {
-    await dataFetch(process.env.PROTOCOL_AND_HOST);
-  } catch (err) {
-    await dataFetch(process.env.Second_Host_Name);
-  }
+  console.log("PROTOCOL_AND_HOST", process.env.PROTOCOL_AND_HOST);
+
+  const request = await fetch(
+    `${process.env.PROTOCOL_AND_HOST}/api/product/single-p/${_id}`,
+    { cache: "no-cache" }
+    // { next: { revalidate: 21600 } }
+  );
+  result = (await request.json()).data;
+
   if (!result) {
     notFound();
   }
