@@ -203,14 +203,7 @@ const UserSlice = createSlice({
 
     builder.addCase(getMyOrders.fulfilled, (state, action) => {
       const { success, message, data, opened, newPage } = action.payload;
-      console.log(
-        " success, message, data, opened, newPage ",
-        success,
-        message,
-        data,
-        opened,
-        newPage
-      );
+
       state.loadingOrder = false;
       if (success) {
         if (opened == "key") state.key = data;
