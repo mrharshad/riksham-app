@@ -1,6 +1,6 @@
 import style from "./footer.module.css";
 
-export default function Footer({ Link, Image }) {
+export default function Footer({ Link }) {
   return (
     <footer id="footer" className={style.footer}>
       <div className={style.firstComponent}>
